@@ -46,6 +46,7 @@
     <Compile Include="Chapter3\Depth-first_Search.cs" />
     <Compile Include="Chapter3\GraphSearchOperate.cs" />
     <Compile Include="Chapter4\Array.cs" />
+    <Compile Include="Chapter4\BinarySearchUtility.cs" />
     <Compile Include="Chapter4\BRGCpowerset.cs" />
     <Compile Include="Chapter4\Decrease-and-conquer.cs" />
     <Compile Include="CurrentDirectory.cs" />

@@ -14,18 +14,20 @@ namespace AlgorithmStudy
             //Chapter4.Array.LexicographicPermute(10);
 
 
-            List<List<int>> ls = Chapter4.BRGCpowerset.BRGC(3);
+            //List<List<int>> ls = Chapter4.BRGCpowerset.BRGC(3);
 
 
-            foreach (var item in ls)
-            {
-                foreach (var value in item)
-                {
-                    Console.Write(value);
-                }
-                Console.WriteLine();
-            }
+            //foreach (var item in ls)
+            //{
+            //    foreach (var value in item)
+            //    {
+            //        Console.Write(value);
+            //    }
+            //    Console.WriteLine();
+            //}
+            int[] nums = { 1, 10, 12, 15, 65, 87, 89, 90, 100 };
 
+            Console.WriteLine( Chapter4.BinarySearchUtility.BinarySearch(nums,89));
 
             Console.ReadLine();
         }
