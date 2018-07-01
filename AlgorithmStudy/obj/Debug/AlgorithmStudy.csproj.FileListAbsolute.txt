@@ -1,0 +1,7 @@
+D:\C#\TestFile\AlgorithmStudy\AlgorithmStudy\bin\Debug\AlgorithmStudy.exe.config
+D:\C#\TestFile\AlgorithmStudy\AlgorithmStudy\bin\Debug\AlgorithmStudy.exe
+D:\C#\TestFile\AlgorithmStudy\AlgorithmStudy\bin\Debug\AlgorithmStudy.pdb
+D:\C#\TestFile\AlgorithmStudy\AlgorithmStudy\obj\Debug\AlgorithmStudy.csproj.CoreCompileInputs.cache
+D:\C#\TestFile\AlgorithmStudy\AlgorithmStudy\obj\Debug\AlgorithmStudy.exe
+D:\C#\TestFile\AlgorithmStudy\AlgorithmStudy\obj\Debug\AlgorithmStudy.pdb
+D:\C#\TestFile\AlgorithmStudy\AlgorithmStudy\obj\Debug\AlgorithmStudy.csprojAssemblyReference.cache
