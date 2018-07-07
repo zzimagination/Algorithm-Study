@@ -25,10 +25,16 @@ namespace AlgorithmStudy
             //    }
             //    Console.WriteLine();
             //}
-            int[] nums = { 1, 10, 12, 15, 65, 87, 89, 90, 100 };
+            //int[] nums = { 1, 10, 12, 15, 65, 87, 89, 90, 100 };
 
-            Console.WriteLine( Chapter4.BinarySearchUtility.BinarySearch(nums,89));
+            //Console.WriteLine( Chapter4.BinarySearchUtility.BinarySearch(nums,89));
 
+            int[] nums = { 8, 3, 2, 9, 7, 1, 5, 4 };
+            int[] numF= Chapter5.MergingSort.Sort(nums);
+            foreach (var item in numF)
+            {
+                Console.WriteLine(item);
+            }
             Console.ReadLine();
         }
     }

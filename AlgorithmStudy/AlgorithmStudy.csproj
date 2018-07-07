@@ -49,6 +49,7 @@
     <Compile Include="Chapter4\BinarySearchUtility.cs" />
     <Compile Include="Chapter4\BRGCpowerset.cs" />
     <Compile Include="Chapter4\Decrease-and-conquer.cs" />
+    <Compile Include="Chapter5\MergingSort.cs" />
     <Compile Include="CurrentDirectory.cs" />
     <Compile Include="GraphZL.cs" />
     <Compile Include="Chapter4\InsertionSort.cs" />
