@@ -36,8 +36,23 @@ namespace AlgorithmStudy.Chapter5
                     }
                 }
                 numA= Sort(numA);
+                foreach (var item in numA)
+                {
+                    Console.Write(item + " ");
+                }
+                Console.WriteLine("");
                 numB= Sort(numB);
+                foreach (var item in numB)
+                {
+                    Console.Write(item + " ");
+                }
+                Console.WriteLine("");
                 Merage(numA, numB, numC);
+                foreach (var item in numC)
+                {
+                    Console.Write(item + " ");
+                }
+                Console.WriteLine("");
                 return numC;
             }else
             {

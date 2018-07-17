@@ -8,7 +8,6 @@ namespace AlgorithmStudy.Chapter5
 {
     class QuickSort
     {
-
         /// <summary>
         /// 快速排序法
         /// 输入数组a和相对子数组左下标l，右下标r
@@ -23,11 +22,8 @@ namespace AlgorithmStudy.Chapter5
             if (l<r)
             {
                 int s = HoarePartition(arrays,l,r);
-                
                 Sort(arrays,l,s-1);
                 Sort(arrays,s+1,r);
-
-             
             }
             return arrays;
         }
@@ -59,6 +55,9 @@ namespace AlgorithmStudy.Chapter5
                 numbers[i] = numbers[i] + numbers[j];
                 numbers[j] = numbers[i] - numbers[j];
                 numbers[i] = numbers[i] - numbers[j];
+                //最后一次循环的不应交换numbers[i]和numbers[j]的值，
+                //应该去交换中值与numbers[j]的值， 因为交叉之后右边的值一定大
+                //于中值，左边一定小于中值， 要在下面换回来
 
             }
             numbers[i] = numbers[i] + numbers[j];

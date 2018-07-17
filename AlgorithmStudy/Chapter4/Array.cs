@@ -9,7 +9,7 @@ namespace AlgorithmStudy.Chapter4
     class Array
     {
 
-        public static void LexicographicPermute(int n)
+        public static List<List<int>> LexicographicPermute(int n)
         {
             List<List<int>> lists = new List<List<int>>();
             List<int> listFirst = new List<int>();
@@ -23,53 +23,61 @@ namespace AlgorithmStudy.Chapter4
             bool isFor = true;
             while(isFor)
             {
-                int max = 0;
-                for (int i = 0; i < listFirst.Count-1; i++)
+                List<int> listNew = new List<int>(lists[lists.Count-1]);
+                int i = 0;
+                for (int c = 0; c < listNew.Count-1; c++)
                 {
-                    if (listFirst[i] < listFirst[i + 1])
-                        max = i;
-                    else
-                        continue;
+                    if (listNew[c] < listNew[c + 1])
+                        i = c;
                 }
                 int j=0;
-                for (int i = 0; i < listFirst.Count; i++)
+                for (int c= 0; c< listNew.Count; c++)
                 {
-                    if(listFirst[max]<listFirst[i])
+                    if(listNew[i]< listNew[c])
                     {
-                        j = i;
+                        j = c;
                     }
                 }
-                int mid = listFirst[max];
-                listFirst[max] = listFirst[j];
-                listFirst[j] = mid;
-                List<int> listNew = new List<int>();
+                int mid = listNew[i];
+                listNew[i] = listNew[j];
+                listNew[j] = mid;
 
-                for (int i = 0; i <= max; i++)
-                {
-                    listNew.Add(listFirst[i]);
-                }
 
-                for (int i =listFirst.Count-1; i >max; i--)
+                for (int c = 0; ; c++)
                 {
-                    listNew.Add(listFirst[i]);
+                    int a = i + 1 + c;
+                    int b = n-1 - c;
+                    if (a >= b)
+                        break;
+                    int midNum = listNew[a];
+                    listNew[a] = listNew[b];
+                    listNew[b] = midNum;
+
                 }
+                
                 lists.Add(listNew);
-                listFirst = listNew;
-                for (int i = 0; i < listFirst.Count-1; i++)
+                //foreach (var listsss in listNew)
+                //{
+                //    Console.Write(listsss + " ");
+
+                //}
+                //Console.WriteLine();
+                for (int c = 0; c < listNew.Count - 1; c++)
                 {
-                    if(listFirst[i]<listFirst[i+1])
+                    if (listNew[c] < listNew[c + 1])
                     {
                         isFor = true;
                         break;
-                    }else
+                    }
+                    else
                     {
                         isFor = false;
                     }
                 }
-
             }
 
-            Console.WriteLine(lists.Count);
+          
+            return lists;
         }
     }
 }
