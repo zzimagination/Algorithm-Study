@@ -8,7 +8,13 @@ namespace AlgorithmStudy.Chapter4
 {
     class Array
     {
-
+        /// <summary>
+        /// 求所有排列的算法
+        /// 输入一个正整数n
+        /// 输出一个集合{1，...n}的所有排列方式的列表，并按照字典序
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
         public static List<List<int>> LexicographicPermute(int n)
         {
             List<List<int>> lists = new List<List<int>>();
@@ -56,12 +62,7 @@ namespace AlgorithmStudy.Chapter4
                 }
                 
                 lists.Add(listNew);
-                //foreach (var listsss in listNew)
-                //{
-                //    Console.Write(listsss + " ");
 
-                //}
-                //Console.WriteLine();
                 for (int c = 0; c < listNew.Count - 1; c++)
                 {
                     if (listNew[c] < listNew[c + 1])

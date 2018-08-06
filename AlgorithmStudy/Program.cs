@@ -13,40 +13,15 @@ namespace AlgorithmStudy
     {
         static void Main(string[] args)
         {
-            var listss= Chapter4.Array.LexicographicPermute(3);
-            foreach (var item in listss)
+            
+
+            int[] nums = { 8, 3, 2, 9, 7, 1, 5, 4 ,4,6235,999,6,67,78,3312,789,658,2,98675};
+            nums= Chapter5.MergingSort.Sort(nums);
+           
+            foreach (var item in nums)
             {
-                foreach (var lists in item)
-                {
-                    Console.Write(lists + " ");
-
-                }
-                Console.WriteLine();
-
+                Console.Write(item+" ");
             }
-
-            //List<List<int>> ls = Chapter4.BRGCpowerset.BRGC(3);
-
-
-            //foreach (var item in ls)
-            //{
-            //    foreach (var value in item)
-            //    {
-            //        Console.Write(value);
-            //    }
-            //    Console.WriteLine();
-            //}
-            //int[] nums = { 1, 10, 12, 15, 65, 87, 89, 90, 100 };
-
-            //Console.WriteLine( Chapter4.BinarySearchUtility.BinarySearch(nums,89));
-
-            //int[] nums = { 8, 3, 2, 9, 7, 1, 5, 4 };
-            //Chapter5.MergingSort.Sort(nums);
-            //int[] numF= Chapter5.QuickSort.Sort(nums,0,7);
-            //foreach (var item in numF)
-            //{
-            //    Console.WriteLine(item);
-            //}
 
             Console.ReadLine();
         }

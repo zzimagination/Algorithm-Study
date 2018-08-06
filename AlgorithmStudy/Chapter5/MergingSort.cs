@@ -36,23 +36,11 @@ namespace AlgorithmStudy.Chapter5
                     }
                 }
                 numA= Sort(numA);
-                foreach (var item in numA)
-                {
-                    Console.Write(item + " ");
-                }
-                Console.WriteLine("");
+              
                 numB= Sort(numB);
-                foreach (var item in numB)
-                {
-                    Console.Write(item + " ");
-                }
-                Console.WriteLine("");
+            
                 Merage(numA, numB, numC);
-                foreach (var item in numC)
-                {
-                    Console.Write(item + " ");
-                }
-                Console.WriteLine("");
+             
                 return numC;
             }else
             {
@@ -61,7 +49,7 @@ namespace AlgorithmStudy.Chapter5
         }
 
 
-        static int[] Merage(int[] A, int[] B, int[] C)
+        static void Merage(int[] A, int[] B, int[] C)
         {
             int p = A.Length;
             int q = B.Length;
@@ -84,7 +72,7 @@ namespace AlgorithmStudy.Chapter5
             {
                 for (int numI = j; numI < q; numI++)
                 {
-                    C[k] = B[j];
+                    C[k] = B[numI];
                     k++;
                 }
             }
@@ -92,12 +80,10 @@ namespace AlgorithmStudy.Chapter5
             {
                 for (int numI = i; numI < p; numI++)
                 {
-                    C[k] = A[i];
+                    C[k] = A[numI];
                     k++;
                 }
             }
-
-            return C;
         }
 
     }
