@@ -17,15 +17,22 @@ namespace AlgorithmStudy.Chapter5
         /// <param name="l"></param>
         /// <param name="r"></param>
         /// <returns></returns>
-        public static int[] Sort(int[] arrays,int l, int r)
+        public static int[] Sort(int[] arrays)
         {
-            if (l<r)
-            {
-                int s = HoarePartition(arrays,l,r);
-                Sort(arrays,l,s-1);
-                Sort(arrays,s+1,r);
-            }
+
+            _Sort(arrays, 0, arrays.Length-1);
             return arrays;
+        }
+
+
+        static void _Sort(int[] arrays, int l, int r)
+        {
+            if (l < r)
+            {
+                int s = HoarePartition(arrays, l, r);
+                _Sort(arrays, l, s-1);
+                _Sort(arrays, s, r);
+            }
         }
 
         /// <summary>
@@ -35,39 +42,40 @@ namespace AlgorithmStudy.Chapter5
         /// </summary>
         /// <param name="numbers"></param>
         /// <returns></returns>
-        public static int HoarePartition(int[] numbers,int l, int r)
+        static int HoarePartition(int[] numbers, int l, int r)
         {
             int p = numbers[l];
-            int i = l+1;
+            int i = l + 1;
             int j = r;
             while (i < j)
             {
-                while (numbers[i] < p)
+                while (i < r)
                 {
-                    i += 1;
-                    if (i > r)
+
+                    if (numbers[i] > p)
                         break;
+                    i ++;
                 }
-                while (numbers[j] > p)
+                while (j > l + 1)
                 {
-                    j -= 1;
+                    if (numbers[j] <= p)
+                        break;
+                    j --;
                 }
-                numbers[i] = numbers[i] + numbers[j];
-                numbers[j] = numbers[i] - numbers[j];
-                numbers[i] = numbers[i] - numbers[j];
-                //最后一次循环的不应交换numbers[i]和numbers[j]的值，
-                //应该去交换中值与numbers[j]的值， 因为交叉之后右边的值一定大
-                //于中值，左边一定小于中值， 要在下面换回来
 
+                if (i < j)
+                {
+                    numbers[i] = numbers[i] + numbers[j];
+                    numbers[j] = numbers[i] - numbers[j];
+                    numbers[i] = numbers[i] - numbers[j];
+                }
             }
-            numbers[i] = numbers[i] + numbers[j];
-            numbers[j] = numbers[i] - numbers[j];
-            numbers[i] = numbers[i] - numbers[j];
-
-            numbers[l] = numbers[l] + numbers[j];
-            numbers[j] = numbers[l] - numbers[j];
-            numbers[l] = numbers[l] - numbers[j];
-
+            if (numbers[j]<numbers[l])
+            {
+                numbers[l] = numbers[l] + numbers[j];
+                numbers[j] = numbers[l] - numbers[j];
+                numbers[l] = numbers[l] - numbers[j];
+            }
             return j;
         }
 

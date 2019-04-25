@@ -13,16 +13,30 @@ namespace AlgorithmStudy
     {
         static void Main(string[] args)
         {
-            
 
-            int[] nums = { 8, 3, 2, 9, 7, 1, 5, 4 ,4,6235,999,6,67,78,3312,789,658,2,98675};
-            nums= Chapter5.MergingSort.Sort(nums);
-           
+
+            int[] nums = new int[10];
+            Random random = new Random(23232);
+            for (int i = 0; i < nums.Length; i++)
+            {
+               
+                nums[i] = random.Next(0,20);
+            }
+            //nums= Chapter5.MergingSort.Sort(nums);
+
             foreach (var item in nums)
             {
-                Console.Write(item+" ");
+                Console.Write(item + " ");
             }
+            Console.WriteLine();
+            nums = Chapter5.QuickSort.Sort(nums);
 
+
+
+            foreach (var item in nums)
+            {
+                Console.Write(item + " ");
+            }
             Console.ReadLine();
         }
 

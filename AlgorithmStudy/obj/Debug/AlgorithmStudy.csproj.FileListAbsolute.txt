@@ -5,3 +5,10 @@ D:\C#\TestFile\AlgorithmStudy\AlgorithmStudy\obj\Debug\AlgorithmStudy.csproj.Cor
 D:\C#\TestFile\AlgorithmStudy\AlgorithmStudy\obj\Debug\AlgorithmStudy.exe
 D:\C#\TestFile\AlgorithmStudy\AlgorithmStudy\obj\Debug\AlgorithmStudy.pdb
 D:\C#\TestFile\AlgorithmStudy\AlgorithmStudy\obj\Debug\AlgorithmStudy.csprojAssemblyReference.cache
+D:\C#\MyProject\Algorithm\AlgorithmStudy\AlgorithmStudy\obj\Debug\AlgorithmStudy.exe
+D:\C#\MyProject\Algorithm\AlgorithmStudy\AlgorithmStudy\obj\Debug\AlgorithmStudy.pdb
+D:\C#\MyProject\Algorithm\AlgorithmStudy\AlgorithmStudy\obj\Debug\AlgorithmStudy.csproj.CoreCompileInputs.cache
+D:\C#\MyProject\Algorithm\AlgorithmStudy\AlgorithmStudy\bin\Debug\AlgorithmStudy.exe.config
+D:\C#\MyProject\Algorithm\AlgorithmStudy\AlgorithmStudy\bin\Debug\AlgorithmStudy.exe
+D:\C#\MyProject\Algorithm\AlgorithmStudy\AlgorithmStudy\bin\Debug\AlgorithmStudy.pdb
+D:\C#\MyProject\Algorithm\AlgorithmStudy\AlgorithmStudy\obj\Debug\AlgorithmStudy.csprojAssemblyReference.cache

@@ -23,7 +23,7 @@ namespace AlgorithmStudy.Chapter5
             {
                 int[] numA = new int[count / 2];
                 int[] numB = new int[count-count / 2];
-                int[] numuC = new int[count];
+                int[] numC = new int[count];
                 for (int i = 0; i < count; i++)
                 {
                     if (i < count / 2)
